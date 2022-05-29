@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  vars:
+          HOME_REMOTE_USER: "{{ ansible_env.HOME }}"
+  gather_facts: true
+  tasks:
+        - name: Create tmp directory for scripts
+          file: path="{{ HOME_REMOTE_USER }}/output"  state=directory mode=777
+          
+        - local_action: file path=output/ state=directory
+          
+        - name: Include task1
+          include_tasks: task1.yml
+          
+          
+        - name: Delete tmp directory
+          file: path="{{ HOME_REMOTE_USER }}/output" state=absent
+          
+           

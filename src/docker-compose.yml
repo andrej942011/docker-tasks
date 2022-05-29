@@ -4,26 +4,28 @@
 
 services:  
 
-  task-client:
+  ansible-server:
     tty: true
     build: 
-            dockerfile: ansible.Dockerfile
+            dockerfile: ansibleServer.Dockerfile
     volumes:
       - ./mnt:/mnt
+      - ./ansible_outout:/home/output
+    environment:
+      - ANSIBLE_HOST_KEY_CHECKING=False
 
-    #command: 'cat /etc/ansible/hosts'
     #command: 'ansible -m ping all'
 
   client-1:
     tty: true
     build: 
-            dockerfile: ansible.Dockerfile
+            dockerfile: ansibleClient.Dockerfile
 
 
   client-2:
     tty: true
     build: 
-            dockerfile: ansible.Dockerfile
+            dockerfile: ansibleClient.Dockerfile
 
 
 networks:

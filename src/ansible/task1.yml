@@ -1,0 +1,9 @@
+- name: Run test1 script
+  block:
+     - name: Run test1.sh
+       script:
+          cmd: ./test1.sh
+       register: test1_result
+     - local_action: file path=output/test1 state=directory
+     - name: Save result
+       local_action: copy content="{{ test1_result.stdout }}" dest="output/test1/{{ inventory_hostname }}_log.log"
