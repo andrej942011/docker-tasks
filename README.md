@@ -1,5 +1,5 @@
 # docker-task-1
-Individual work on the subject of Networks and Telecommunications LF-PSTU //  EVT-18-boz
+Individual work on the subject of Networks and Telecommunications LF-PSTU //  EVT-18-1boz
 
 # Индивидуальное задание Группа 1
 На основе docker cоздать сеть между 2 контейнерами.
