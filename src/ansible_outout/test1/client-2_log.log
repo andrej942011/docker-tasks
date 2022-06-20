@@ -1,0 +1,9 @@
+labs c6542ccc2d0f
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.2  0.0  15412  8920 pts/0    Ss+  11:29   0:00 sshd: /usr/sbin
+root         8  4.5  0.0  17128 10832 ?        Ss   11:30   0:00 sshd: andrey [p
+andrey      20  2.0  0.0  17656  8592 ?        D    11:30   0:00 sshd: andrey@pt
+andrey     121  0.0  0.0   2884   960 pts/1    Ss+  11:30   0:00 sh -c /bin/sh -
+andrey     122  0.0  0.0   2884   936 pts/1    S+   11:30   0:00 /bin/sh -c  /ho
+andrey     123  0.0  0.0   2884   936 pts/1    S+   11:30   0:00 /bin/sh /home/a
+andrey     125  0.0  0.0   7740  3180 pts/1    R+   11:30   0:00 ps -aux

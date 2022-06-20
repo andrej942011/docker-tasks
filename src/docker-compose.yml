@@ -1,0 +1,26 @@
+services:  
+
+  ansible-server:
+    tty: true
+    build: 
+            dockerfile: ansibleServer.Dockerfile
+    volumes:
+      - ./mnt:/mnt
+      - ./ansible_outout:/home/output
+    environment:
+      - ANSIBLE_HOST_KEY_CHECKING=False
+
+  client-1:
+    tty: true
+    build: 
+            dockerfile: ansibleClient.Dockerfile
+
+
+  client-2:
+    tty: true
+    build: 
+            dockerfile: ansibleClient.Dockerfile
+
+
+networks:
+  default:
