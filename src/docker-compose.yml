@@ -1,0 +1,4 @@
+services:  
+  hello_world:
+    build: 
+            dockerfile: hello_world.Dockerfile
